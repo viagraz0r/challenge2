@@ -162,9 +162,9 @@ footer .attribution a {
 	}
 }
 
-/* ********** >1440px ********** */
+/* ********** >992px ********** */
 
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 992px) {
 	.cards-container {
 		display: flex;
 		justify-content: center;
