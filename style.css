@@ -1,0 +1,178 @@
+:root {
+	--Red: hsl(0, 78%, 62%);
+	--Cyan: hsl(180, 62%, 55%);
+	--Orange: hsl(34, 97%, 64%);
+	--Blue: hsl(212, 86%, 64%);
+	--VeryDarkBlue: hsl(234, 12%, 34%);
+	--GrayishBlue: hsl(229, 6%, 66%);
+	--VeryLightGray: hsl(0, 0%, 98%);
+
+	--FuentePrincipal: 'Poppins', sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: var(--FuentePrincipal);
+	font-size: 15px;
+	color: var(--VeryDarkBlue);
+	background-color: var(--VeryLightGray);
+}
+
+.container {
+	margin: 90px auto;
+	max-width: 80%;
+}
+
+header {
+	text-align: center;
+}
+
+header h1 {
+	font-size: 24px;
+	font-weight: 200;
+}
+
+header h2 {
+	font-size: 24px;
+	font-weight: 600;
+}
+
+header p {
+	font-weight: 400;
+	color: var(--GrayishBlue);
+	margin-top: 24px;
+}
+
+.cards-container {
+	margin: 75px auto;
+	max-width: 500px;
+}
+
+.card {
+	margin-bottom: 25px;
+	border-radius: 8px;
+	height: 225px;
+	box-shadow: 3px 10px 10px var(--GrayishBlue);
+	overflow: hidden;
+	min-width: 250px;
+	max-width: 500px;
+}
+
+.card1 .line {
+	height: 4px;
+	background-color: var(--Cyan);
+}
+.card2 .line {
+	height: 4px;
+	background-color: var(--Red);
+}
+.card3 .line {
+	height: 4px;
+	background-color: var(--Orange);
+}
+.card4 .line {
+	height: 4px;
+	background-color: var(--Blue);
+}
+
+.card-content {
+	padding: 30px;
+	height: 225px;
+}
+
+.card-content h3 {
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.card-content p {
+	font-size: 12px;
+	line-height: 22px;
+	color: var(--GrayishBlue);
+	margin-bottom: 15px;
+}
+
+.card-content .image {
+	text-align: right;
+}
+
+.card-content .image img {
+	width: 60px;
+}
+
+footer .attribution {
+	font-size: 11px;
+	text-align: center;
+}
+footer .attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+/* ********** >600px ********** */
+
+@media screen and (min-width: 601px) {
+	body {
+		font-size: 20px;
+	}
+
+	header {
+		max-width: 525px;
+		margin: 0 auto;
+	}
+
+	header h1 {
+		font-size: 28px;
+	}
+
+	header h2 {
+		font-size: 28px;
+	}
+
+	.card-content h3 {
+		font-size: 22px;
+	}
+
+	.card-content p {
+		font-size: 15px;
+	}
+}
+
+/* ********** >768px ********** */
+
+@media screen and (min-width: 769px) {
+	header {
+		max-width: 768px;
+	}
+	.cards-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 30px;
+		max-width: 900px;
+	}
+
+	.two-cards {
+		grid-column: 2/ 3;
+		grid-row: 1 /3;
+	}
+}
+
+/* ********** >1440px ********** */
+
+@media screen and (min-width: 1441px) {
+	.cards-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		max-width: 1440px;
+	}
+
+	.card {
+		width: 355px;
+	}
+}
